@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Browser tab title -->
     <title>Melly Will You Be My Valentine? 💝</title>
 
     <!-- Google Fonts -->
@@ -16,8 +15,8 @@
 
 <body>
 
-    <!-- 🔥 Background Video -->
-    <video autoplay muted loop playsinline id="bg-video">
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline id="bg-video" poster="assets/videos/fallback.jpg">
         <source src="assets/videos/bg-video.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
     </video>
@@ -26,16 +25,14 @@
     <div class="video-overlay"></div>
 
     <!-- Floating Background Elements -->
-    <div class="floating-elements">
-        <!-- Hearts and bears injected by JS -->
-    </div>
+    <div class="floating-elements"></div>
 
     <!-- Main Content Container -->
     <div class="container">
 
         <h1 id="valentineTitle"></h1>
 
-        <!-- 🎵 Music Player -->
+        <!-- Music Player -->
         <div id="musicControls" class="music-controls">
             <button id="musicToggle" class="music-btn">🎵 Play Music</button>
             <audio id="bgMusic" loop>
@@ -44,7 +41,7 @@
             </audio>
         </div>
 
-        <!-- 💌 First Question -->
+        <!-- First Question -->
         <div class="question-section" id="question1">
             <h2 id="question1Text"></h2>
             <button class="cute-btn" onclick="moveButton(this)" id="yesBtn1"></button>
@@ -56,7 +53,7 @@
             </div>
         </div>
 
-        <!-- 💖 Second Question (Love Meter) -->
+        <!-- Second Question (Love Meter) -->
         <div class="question-section hidden" id="question2">
             <h2 id="question2Text"></h2>
 
@@ -74,14 +71,14 @@
             <button class="cute-btn" onclick="showNextQuestion(3)" id="nextBtn"></button>
         </div>
 
-        <!-- 💘 Final Question -->
+        <!-- Final Question -->
         <div class="question-section hidden" id="question3">
             <h2 id="question3Text"></h2>
             <button class="cute-btn final-yes" onclick="celebrate()" id="yesBtn3"></button>
             <button class="cute-btn" onclick="moveButton(this)" id="noBtn3"></button>
         </div>
 
-        <!-- 🎉 Celebration -->
+        <!-- Celebration -->
         <div class="celebration hidden" id="celebration">
             <h2 id="celebrationTitle"></h2>
             <p class="celebration-text" id="celebrationMessage"></p>
